@@ -19,7 +19,7 @@
         <option value="Manager">Manager</option>
     </select>
 
-    <button type="submit">Submit</button>
+    <button formaction="?/post" type="submit">Submit</button>
 </form>
 
 <style>
