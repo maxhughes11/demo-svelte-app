@@ -1,6 +1,6 @@
 <h1 class="font-bold mb-3 text-2xl">Sign up for a new CPSC Account</h1>
 
-<form class="flex flex-col w-1/3">
+<form class="flex flex-col w-1/3" method="post">
     <label for="email">Your email:</label>
     <input name="email" type="email" required>
 

@@ -1,5 +1,6 @@
-<script>
-
+<script lang="ts">
+import type {PageData} from "./$types"
+export let data: PageData
 </script>
 
 <h1 class="font-bold mb-3 text-2xl">View Shortlisted Recalls</h1>
@@ -12,16 +13,18 @@
         <th>Manufacturer</th>
         <th>Recall Date</th>
         <th>Description</th>
-        
+
+        {#each data.feed as recall} 
             <tr>
-                <td>Consumer goods</td>
-                <td>12000</td>
-                <td>5004</td>
-                <td>EasyWash Shampoo</td>
-                <td>Illiad Brands, Inc</td>
-                <td>01/29/2022</td>
-                <td>Can cause allergic reactions</td>
+                <td>{recall.category}</td>
+                <td>{recall.unitsInCirculation}</td>
+                <td>{recall.recallNumber}</td>
+                <td>{recall.productName}</td>
+                <td>{recall.manufacturer}</td>
+                <td>{recall.dateOfAction}</td>
+                <td>{recall.hazardDescription}</td>
             </tr>
+        {/each}
     </table>
 </div>
 
